@@ -3,3 +3,114 @@ body {
     background-color: #f4f4f4;
     color: #333;
 }
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #051094;
+    padding: 20px 40px;
+    color: #fdd017;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 0;
+}
+
+header h1 {
+    font-size: 30px;
+}
+
+#about {
+    background-color: white;
+    padding: 20px;
+    margin-top: 0;
+}
+
+#about h2 {
+    font-size: 30px;
+    color: #1338BE;
+    text-align: center;
+}
+
+#about p {
+    font-size: 15px;
+    text-align: center;
+}
+
+#education {
+    background-color: #051094;
+}
+
+#education h2 {
+    color: white;
+}
+
+#education h3 {
+    color: gold;
+}
+
+nav a {
+    margin-left: 30px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: transform 0.5s ease;
+    transform: translateX(-100%);
+}
+
+nav a:hover{
+    color: #ffd801;
+}
+
+#affiliations {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    color: #333;
+    align-items: flex-start;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.affiliations {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex: 1;
+    margin: 0 10px;
+    text-align: center;
+    flex-wrap: nowrap;
+    gap: 100px;
+    margin-left: 100px;
+}
+
+.affiliations img {
+    width: 100%; /* Make sure image scales to card */
+    max-width: 250px; /* Limit max width */
+    object-fit: cover;
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Center the iumage */
+    align-items: center;
+    border-radius: 10px;
+}
+
+.affilations h3 {
+    text-align: center;
+}
+
+
+.affiliations .item h4 {
+    display: flex;
+    font-size: 24px;
+    color: #0077cc;
+    margin-top: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 40px;
+}
+
+.affiliations h5 {
+    font-size: 20px;
+}
