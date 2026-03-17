@@ -114,3 +114,18 @@ nav a:hover{
 .affiliations h5 {
     font-size: 20px;
 }
+
+#PersonalInfo {
+    background-color: #051094;
+    padding: 20px;
+    border-radius: 10px;
+    color: #333;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+#PersonalInfo h3 {
+    color: #ffd801;
+    font-size: 20px;
+    margin: 10px 0;
+}
