@@ -1,3 +1,14 @@
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 :root {
     --primary: #142B4A;
     --section-bg: #EAF0F7;
@@ -33,6 +44,9 @@ header {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
     margin-bottom: 0;
     border-radius: 40px;
+
+    position: relative;
+    z-index: 1000;
 }
 
 header h1 {
@@ -84,6 +98,8 @@ nav a:hover {
         pointer-events: none;
 
         transition: transform 0.3s ease, opacity 0.3s ease;
+
+        z-index: 1000;
     }
 
     nav.show {
@@ -238,13 +254,59 @@ nav a:hover {
     padding: 20px;
 }
 
-#Experiences h1,
-#Experiences h3 {
+#Experiences h1 {
+    color: var(--text-white);
+    text-align: center;
+}
+
+.experience-card {
+    background-color: var(--card-bg);
+    border-radius: 30px;
+    padding: 15px 30px;
+    margin-bottom: 20px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+
+    max-width: 1200px;
+    margin: 0 auto 20px;
+}
+
+.experience-card h3 {
     color: var(--text-primary);
+    margin: 0;
+}
+
+.experience-card.right {
+    flex-direction: row-reverse;
+    text-align: right;
+}
+
+.experience-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.experience-card img {
+    display: block;
+    width: 220px;
+    height: auto;
+    max-height: 80px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+@media (max-width: 600px) {
+    .experience-card,
+    .experience-card.right {
+        flex-direction: column;
+        text-align: center;
+    }
 }
 
 /* PROJECTS */
-
 #Projects {
     background-color: var(--section-bg);
     color: var(--text-primary);
@@ -255,17 +317,26 @@ nav a:hover {
     color: var(--text-primary);
 }
 
-/* SKILLS */
+/* Quotes */
 
-#Skills {
+#Quotes {
     background-color: var(--primary);
     color: var(--text-primary);
     padding: 20px;
 }
 
-#Skills h2,
-#Skills h3 {
-    color: var(--text-primary);
+#Quotes h1 {
+    text-align: center;
+    color: var(--text-white);
+}
+
+#Quotes p {
+    color: var(--text-white);
+    text-align: center;
+    line-height: 1.6;
+    font-family: Times New Roman, serif;
+    font-size: 20px;
+
 }
 
 /* PERSONAL INFORMATION */
@@ -278,9 +349,30 @@ nav a:hover {
 }
 
 #PersonalInfo h3 {
-    color: var(--text-secondary);
+    color: var(--text-primary);
     font-size: 20px;
     margin: 10px 0;
+
+    text-decoration: none;
+}
+
+#PersonalInfo h3 a {
+    color: inherit;
+    text-decoration: none;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    line-height: 1;
+}
+
+#PersonalInfo img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    flex-shrink: 0;
+    display: block;
+
 }
 
 /* RESUME */
